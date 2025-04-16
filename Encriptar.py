@@ -1,10 +1,7 @@
 from cryptography.fernet import Fernet
 from tkinter import filedialog, Tk
 
-# Variable global para mantener la clave en memoria
-clave_global = None
-
-# Generar una clave y guardarla en un archivo
+#Genera una clave
 def generar_clave():
     global clave_global
     clave = Fernet.generate_key()
@@ -91,7 +88,6 @@ def desencriptar_archivo():
 
 # Función principal
 if __name__ == "__main__":
-    # Ocultar la ventana principal de Tkinter
     Tk().withdraw()
 
     while True:

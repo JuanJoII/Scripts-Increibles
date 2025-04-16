@@ -6,19 +6,18 @@ link = argv[1]
 
 # Función para mostrar el progreso de la descarga
 def on_progress(d):
-    """Función para mostrar el progreso de la descarga."""
     if d['status'] == 'downloading':
         print(f"Descargando... {d['_percent_str']} completado")
 
-# Configuración de yt-dlp para 1080p60 con audio en AAC
+
 ydl_opts = {
-    'outtmpl': 'C:/Users/57314/Desktop/Scripts_Piolas/Downloads_YT/%(title)s.%(ext)s',  # Ruta de descarga
-    'progress_hooks': [on_progress],  # Barra de progreso
-    'format': 'bestvideo[height<=1080][fps>=60]+bestaudio/best',  # Priorizar 1080p60
-    'merge_output_format': 'mp4',  # Formato de salida
+    'outtmpl': 'C:/Users/57314/Desktop/Scripts_Piolas/Downloads_YT/%(title)s.%(ext)s', #Cambiar por la ruta donde se guardaran los archivos
+    'progress_hooks': [on_progress],  
+    'format': 'bestvideo[height<=1080][fps>=60]+bestaudio/best',  
+    'merge_output_format': 'mp4',  
     'postprocessors': [
         {
-            'key': 'FFmpegVideoConvertor',  # Convertir el video a MP4
+            'key': 'FFmpegVideoConvertor',  
             'preferedformat': 'mp4',
         },
     ],
@@ -48,16 +47,16 @@ def download_captions():
     caption_opts = {
         **ydl_opts,
         'writesubtitles': True,
-        'subtitleslangs': ['es'],# Subtítulos en español
+        'subtitleslangs': ['es'],
         'writeautomaticsub': True,
-        'skip_download': True,  # No descargar el video
+        'skip_download': True,  
         'postprocessors': [
             {
-                'key': 'FFmpegSubtitlesConvertor',  # Convertir subtítulos a .txt
-                'format': 'srt',  # Primero convertimos a SRT (formato intermedio)
+                'key': 'FFmpegSubtitlesConvertor',  
+                'format': 'srt',  
             },
             {
-                'key': 'FFmpegSubtitlesConvertor',  # Convertir SRT a TXT
+                'key': 'FFmpegSubtitlesConvertor', 
                 'format': 'txt',
             },
         ],

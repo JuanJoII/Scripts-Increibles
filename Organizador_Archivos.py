@@ -15,6 +15,7 @@ os.makedirs(ruta_videos, exist_ok=True)
 
 extensiones_imagenes = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.webp'}
 extensiones_videos = {'.mp4', '.avi', '.mkv', '.mov', '.flv', '.wmv', '.3GP'}
+# Se pueden agregar más extensiones para organizar otro tipo de archivos
 
 
 for archivo in os.listdir(ruta_origen):
