@@ -1,0 +1,18 @@
+[project]
+name = "scripts-piolas"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "cryptography>=44.0.2",
+    "flask>=3.1.0",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.4",
+    "pyautogui>=0.9.54",
+    "pywhatkit>=5.4",
+    "qrcode>=8.1",
+    "requests>=2.32.3",
+    "yt-dlp>=2025.3.31",
+]
