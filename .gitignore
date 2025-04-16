@@ -5,6 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
+Downloads_YT
+web_img
 
 # Virtual environments
 .venv
