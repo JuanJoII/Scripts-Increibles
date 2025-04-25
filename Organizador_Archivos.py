@@ -1,9 +1,9 @@
 import os
 import shutil
 
-ruta_origen = r'D:\VHCC\Google_Fotos_VH'
+ruta_origen = r'ruta\a\organizar'
 
-ruta_destino_final = 'D:\MULTIMEDIA_ORGANIZADA'
+ruta_destino_final = 'ruta\donde\quedaran\los\archivos\ordenados' # Esta ruta puede ser la misma ruta que se esta organizando
 
 nombre_carpeta_origen = os.path.basename(ruta_origen)
 
