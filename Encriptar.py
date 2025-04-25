@@ -14,7 +14,7 @@ def generar_clave():
         with open(archivo_clave, "wb") as f:
             f.write(clave)
         clave_global = clave
-        print(f"Clave generada y guardada en: {archivo_clave}")
+        print(f"Clave generada y guardada en: {archivo_clave}") 
 
 # Cargar la clave desde un archivo
 def cargar_clave():
